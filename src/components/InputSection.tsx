@@ -147,6 +147,7 @@ export const InputSection: React.FC<InputSectionProps> = ({ onGenerate, isLoadin
             value={topic}
             onChange={(e) => setTopic(e.target.value)}
             onKeyDown={handleKeyDown}
+            maxLength={280}
             placeholder="e.g. Why most people fail at freelancing in 2026 and the 3-step fix..."
             className="w-full px-4 py-3 rounded-xl bg-surface-well border border-surface-border focus:border-emerald-500/60 focus:ring-1 focus:ring-emerald-500/30 text-white placeholder-slate-500 text-sm leading-relaxed transition-all outline-none resize-none shadow-[inset_0_2px_4px_rgba(0,0,0,0.4)]"
             required
@@ -177,6 +178,7 @@ export const InputSection: React.FC<InputSectionProps> = ({ onGenerate, isLoadin
               type="text"
               value={niche}
               onChange={(e) => setNiche(e.target.value)}
+              maxLength={80}
               placeholder="e.g. Freelancers, Tech Founders"
               className="w-full px-3.5 py-2.5 rounded-xl bg-surface-well border border-surface-border focus:border-emerald-500/60 focus:ring-1 focus:ring-emerald-500/30 text-white placeholder-slate-500 text-xs outline-none transition-all shadow-[inset_0_1px_3px_rgba(0,0,0,0.3)]"
               required

@@ -2,6 +2,8 @@ import { register } from 'node:module';
 // Register custom module loader for node environment mocks (e.g. jspdf constructor)
 register('./loader.mjs', import.meta.url);
 
+process.env.NODE_ENV = 'test';
+
 import { allSuiteResults } from './helpers/testHarness';
 
 async function main() {

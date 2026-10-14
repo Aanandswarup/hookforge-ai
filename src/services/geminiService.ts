@@ -15,18 +15,37 @@ export const GeminiService = {
     tone: string;
     platform: string;
   }): Promise<GenerationResult> {
-    const userApiKey = CreditManager.getApiKey() || (import.meta as any).env?.VITE_GEMINI_API_KEY;
+    const userApiKey = CreditManager.getApiKey();
 
+    // 1. If user provided their own key in the UI (BYOK mode), call Gemini API directly
     if (userApiKey && userApiKey.trim().length > 10) {
       try {
         return await this.callGeminiApi(params, userApiKey.trim());
       } catch (err) {
-        console.warn('Gemini API call failed or rate-limited, falling back to intelligent generator:', err);
+        console.warn('User BYOK Gemini API call failed or rate-limited, falling back to intelligent generator:', err);
         return this.generateSmartFallback(params);
       }
     }
 
-    // High quality intelligent generator for instant testing / demo
+    // 2. If running on a deployed host with serverless edge proxy (/api/generate), call it
+    try {
+      const serverProxyResponse = await fetch('/api/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(params),
+      });
+
+      if (serverProxyResponse.ok) {
+        const data = await serverProxyResponse.json();
+        if (data && data.hooks && data.carouselSlides) {
+          return data;
+        }
+      }
+    } catch {
+      // Offline, static host, or local preview: proceed smoothly to client-side smart engine
+    }
+
+    // 3. Ultra-fast, zero-cost intelligent client generator
     return this.generateSmartFallback(params);
   },
 

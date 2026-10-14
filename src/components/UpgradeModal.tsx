@@ -41,15 +41,8 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({ isOpen, onClose, onS
       onSuccess();
       onClose();
     } else {
-      setErrorMsg('Invalid license key. Format: HF-PRO-XXXX or any key with 6+ chars.');
+      setErrorMsg('Invalid or unverified license key. Please check the key in your confirmation email.');
     }
-  };
-
-  const handleQuickDemoUnlock = () => {
-    CreditManager.activatePro('HF-PRO-DEMO-VIP');
-    confetti({ particleCount: 150, spread: 110, origin: { y: 0.5 } });
-    onSuccess();
-    onClose();
   };
 
   // Replace this with actual checkout link
@@ -167,17 +160,6 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({ isOpen, onClose, onS
             </div>
             {errorMsg && <p className="text-[11px] text-rose-400">{errorMsg}</p>}
           </form>
-
-          {/* Quick Demo Unlock Button */}
-          <div className="mt-3">
-            <button
-              onClick={handleQuickDemoUnlock}
-              className="text-[11px] font-mono text-slate-400 hover:text-emerald-400 hover:bg-emerald-500/10 px-2.5 py-1 rounded-md transition-all inline-flex items-center gap-1.5 mx-auto"
-            >
-              <Key className="w-3 h-3" />
-              <span>(Demo Test: Instantly Unlock Pro for Testing)</span>
-            </button>
-          </div>
         </div>
 
       </div>
