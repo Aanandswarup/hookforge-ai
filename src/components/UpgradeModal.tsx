@@ -46,7 +46,7 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({ isOpen, onClose, onS
   };
 
   // Set to your Gumroad product checkout link
-  const CHECKOUT_URL = 'https://aanandswarup.gumroad.com/l/hookforge';
+  const CHECKOUT_URL = 'https://caanand7.gumroad.com/l/hookforge';
 
   return (
     <div 
