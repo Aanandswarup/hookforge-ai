@@ -1,70 +1,60 @@
-# HookForge AI — 1-Click Multi-Channel Sales Dispatcher
-# Automatically opens pre-composed posts in your default browser where you are already logged in!
-
+# HookForge AI - Multi-Channel Sales Dispatcher
 param(
-    [ValidateSet("all", "twitter", "hackernews", "reddit", "linkedin", "gumroad")]
     [string]$Channel = "all"
 )
 
-$twitterText = [System.Uri]::EscapeDataString("80% of short-form videos & LinkedIn carousels fail in the first 3 seconds because the hook has zero cognitive tension.`n`nI spent 72h building HookForge AI: an in-browser studio that turns raw ideas into 5 viral hooks & styled carousels in 10s.`n`nTry free: https://aanandswarup.github.io/hookforge-ai/`n`n50% off first 10 LTDs with code EARLYBIRD 🔥")
-$twitterUrl = "https://twitter.com/intent/tweet?text=$twitterText"
-
-$hnTitle = [System.Uri]::EscapeDataString("Show HN: HookForge – In-browser viral hook and canvas carousel studio (client-side, $0 backend)")
-$hnUrl = "https://news.ycombinator.com/submitlink?u=https%3A%2F%2Faanandswarup.github.io%2Fhookforge-ai%2F&t=$hnTitle"
-
-$redditTitle = [System.Uri]::EscapeDataString("I was tired of Canva & expensive AI subscriptions, so I built an in-browser viral hook & visual carousel studio ($0 server costs)")
-$redditUrl = "https://www.reddit.com/r/SideProject/submit?url=https%3A%2F%2Faanandswarup.github.io%2Fhookforge-ai%2F&title=$redditTitle"
-
-$linkedinUrl = "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faanandswarup.github.io%2Fhookforge-ai%2F"
-
+$siteUrl = "https://aanandswarup.github.io/hookforge-ai/"
+$gumroadCheckout = "https://caanand7.gumroad.com/l/hookforge/EARLYBIRD"
 $gumroadDiscounts = "https://app.gumroad.com/discounts"
 
+$tweetMsg = "80% of short-form videos and LinkedIn carousels fail in the first 3 seconds because the hook has zero tension.`n`nI built HookForge AI: an in-browser studio that turns raw ideas into 5 viral hooks and styled carousels in 10s.`n`nTry free: " + $siteUrl + "`n`nFirst 10 creators get 50% off with code EARLYBIRD"
+$encodedTweet = [System.Uri]::EscapeDataString($tweetMsg)
+$twitterUrl = "https://twitter.com/intent/tweet?text=" + $encodedTweet
+
+$hnTitle = "Show HN: HookForge - In-browser viral hook and canvas carousel studio (client-side)"
+$encodedHnTitle = [System.Uri]::EscapeDataString($hnTitle)
+$encodedSiteUrl = [System.Uri]::EscapeDataString($siteUrl)
+$hnUrl = "https://news.ycombinator.com/submitlink?u=" + $encodedSiteUrl + "&t=" + $encodedHnTitle
+
+$redditTitle = "I was tired of Canva and expensive AI tools, so I built an in-browser viral hook and visual carousel studio"
+$encodedRedditTitle = [System.Uri]::EscapeDataString($redditTitle)
+$redditUrl = "https://www.reddit.com/r/SideProject/submit?url=" + $encodedSiteUrl + "&title=" + $encodedRedditTitle
+
+$linkedinUrl = "https://www.linkedin.com/sharing/share-offsite/?url=" + $encodedSiteUrl
+
 Write-Host "==========================================================" -ForegroundColor Cyan
-Write-Host "   HOOKFORGE AI — 1-CLICK SALES & DISTRIBUTION LAUNCHER   " -ForegroundColor Yellow
+Write-Host "   HOOKFORGE AI - MULTI-CHANNEL SALES LAUNCHER            " -ForegroundColor Yellow
 Write-Host "==========================================================" -ForegroundColor Cyan
 
-switch ($Channel) {
-    "twitter" {
-        Write-Host "Opening Twitter/X composer with pre-filled launch tweet..." -ForegroundColor Green
-        Start-Process $twitterUrl
-    }
-    "hackernews" {
-        Write-Host "Opening Hacker News submission with pre-filled Show HN..." -ForegroundColor Green
-        Start-Process $hnUrl
-    }
-    "reddit" {
-        Write-Host "Opening Reddit r/SideProject submit page..." -ForegroundColor Green
-        Start-Process $redditUrl
-    }
-    "linkedin" {
-        Write-Host "Opening LinkedIn share dialog..." -ForegroundColor Green
-        Start-Process $linkedinUrl
-    }
-    "gumroad" {
-        Write-Host "Opening Gumroad discounts settings..." -ForegroundColor Green
-        Start-Process $gumroadDiscounts
-    }
-    "all" {
-        Write-Host "[1/5] Opening Gumroad Discounts to set EARLYBIRD..." -ForegroundColor Yellow
-        Start-Process $gumroadDiscounts
-        Start-Sleep -Seconds 1
-
-        Write-Host "[2/5] Opening Twitter/X composer with pre-filled thread..." -ForegroundColor Green
-        Start-Process $twitterUrl
-        Start-Sleep -Seconds 1
-
-        Write-Host "[3/5] Opening Hacker News Show HN submit page..." -ForegroundColor Cyan
-        Start-Process $hnUrl
-        Start-Sleep -Seconds 1
-
-        Write-Host "[4/5] Opening Reddit r/SideProject submit page..." -ForegroundColor Magenta
-        Start-Process $redditUrl
-        Start-Sleep -Seconds 1
-
-        Write-Host "[5/5] Opening LinkedIn Share page..." -ForegroundColor Blue
-        Start-Process $linkedinUrl
-    }
+if ($Channel -eq "twitter" -or $Channel -eq "all") {
+    Write-Host "[*] Opening Twitter / X with pre-filled launch thread..." -ForegroundColor Green
+    Start-Process $twitterUrl
+    Start-Sleep -Milliseconds 800
 }
 
-Write-Host "`nAll selected channels opened in your default browser!" -ForegroundColor Green
-Write-Host "All posts have titles, links, and text pre-filled. Just click 'Post' / 'Submit'!" -ForegroundColor Yellow
+if ($Channel -eq "hackernews" -or $Channel -eq "all") {
+    Write-Host "[*] Opening Hacker News (Show HN) submit page..." -ForegroundColor Cyan
+    Start-Process $hnUrl
+    Start-Sleep -Milliseconds 800
+}
+
+if ($Channel -eq "reddit" -or $Channel -eq "all") {
+    Write-Host "[*] Opening Reddit (r/SideProject) submit page..." -ForegroundColor Magenta
+    Start-Process $redditUrl
+    Start-Sleep -Milliseconds 800
+}
+
+if ($Channel -eq "linkedin" -or $Channel -eq "all") {
+    Write-Host "[*] Opening LinkedIn share composer..." -ForegroundColor Blue
+    Start-Process $linkedinUrl
+    Start-Sleep -Milliseconds 800
+}
+
+if ($Channel -eq "gumroad" -or $Channel -eq "all") {
+    Write-Host "[*] Opening Gumroad Discounts dashboard..." -ForegroundColor Yellow
+    Start-Process $gumroadDiscounts
+}
+
+Write-Host ""
+Write-Host "SUCCESS: All promotional channels opened in your default browser!" -ForegroundColor Green
+Write-Host "Titles, links, and pitches are pre-filled. Just click Post / Submit!" -ForegroundColor Yellow
