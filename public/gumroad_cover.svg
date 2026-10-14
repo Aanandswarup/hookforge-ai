@@ -1,0 +1,110 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0d131f" />
+      <stop offset="100%" stop-color="#05080f" />
+    </linearGradient>
+
+    <!-- Emerald Glow -->
+    <radialGradient id="glow" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Accent Gradient -->
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="50%" stop-color="#2dd4bf" />
+      <stop offset="100%" stop-color="#22d3ee" />
+    </linearGradient>
+
+    <!-- Card Background -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#151d2a" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0d131f" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1280" height="720" fill="url(#bg)" />
+
+  <!-- Ambient Glow -->
+  <circle cx="640" cy="220" r="450" fill="url(#glow)" />
+
+  <!-- Subtle Grid Pattern -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="120" x2="1280" y2="120" />
+    <line x1="0" y1="240" x2="1280" y2="240" />
+    <line x1="0" y1="360" x2="1280" y2="360" />
+    <line x1="0" y1="480" x2="1280" y2="480" />
+    <line x1="0" y1="600" x2="1280" y2="600" />
+    <line x1="160" y1="0" x2="160" y2="720" />
+    <line x1="320" y1="0" x2="320" y2="720" />
+    <line x1="480" y1="0" x2="480" y2="720" />
+    <line x1="640" y1="0" x2="640" y2="720" />
+    <line x1="800" y1="0" x2="800" y2="720" />
+    <line x1="960" y1="0" x2="960" y2="720" />
+    <line x1="1120" y1="0" x2="1120" y2="720" />
+  </g>
+
+  <!-- Badge Pill -->
+  <g transform="translate(485, 90)">
+    <rect width="310" height="36" rx="18" fill="#10b981" fill-opacity="0.12" stroke="#10b981" stroke-opacity="0.35" stroke-width="1.5" />
+    <text x="155" y="23" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#34d399" letter-spacing="2" text-anchor="middle">LIFETIME ACCESS PASS • $39</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="640" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="64" font-weight="900" fill="#ffffff" letter-spacing="-1.5" text-anchor="middle">
+    HookForge <tspan fill="url(#accent)">AI</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="640" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="500" fill="#94a3b8" letter-spacing="-0.3" text-anchor="middle">
+    Viral Hooks • 60s Retention Scripts • In-Browser Visual Carousel Studio
+  </text>
+
+  <!-- 3 Feature Pillars (Bento Cards) -->
+  <g transform="translate(140, 310)">
+    <!-- Card 1 -->
+    <rect width="300" height="240" rx="20" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.5" />
+    <circle cx="50" cy="50" r="22" fill="#10b981" fill-opacity="0.15" />
+    <text x="50" y="56" font-family="sans-serif" font-size="18" fill="#34d399" text-anchor="middle">⚡</text>
+    <text x="30" y="115" font-family="sans-serif" font-size="20" font-weight="800" fill="#ffffff">5 Viral Hooks</text>
+    <text x="30" y="145" font-family="sans-serif" font-size="13" font-weight="400" fill="#94a3b8">Curiosity gap, contrarian,</text>
+    <text x="30" y="165" font-family="sans-serif" font-size="13" font-weight="400" fill="#94a3b8">story &amp; data hooks with</text>
+    <text x="30" y="185" font-family="sans-serif" font-size="13" font-weight="700" fill="#34d399">real-time CTR virality scores</text>
+  </g>
+
+  <g transform="translate(490, 310)">
+    <!-- Card 2 -->
+    <rect width="300" height="240" rx="20" fill="url(#cardBg)" stroke="#10b981" stroke-opacity="0.4" stroke-width="1.5" />
+    <circle cx="50" cy="50" r="22" fill="#06b6d4" fill-opacity="0.15" />
+    <text x="50" y="56" font-family="sans-serif" font-size="18" fill="#22d3ee" text-anchor="middle">🎬</text>
+    <text x="30" y="115" font-family="sans-serif" font-size="20" font-weight="800" fill="#ffffff">60s Video Script</text>
+    <text x="30" y="145" font-family="sans-serif" font-size="13" font-weight="400" fill="#94a3b8">B-roll visual cues, text overlays</text>
+    <text x="30" y="165" font-family="sans-serif" font-size="13" font-weight="400" fill="#94a3b8">&amp; sound FX direction with</text>
+    <text x="30" y="185" font-family="sans-serif" font-size="13" font-weight="700" fill="#22d3ee">built-in Teleprompter mode</text>
+  </g>
+
+  <g transform="translate(840, 310)">
+    <!-- Card 3 -->
+    <rect width="300" height="240" rx="20" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.5" />
+    <circle cx="50" cy="50" r="22" fill="#8b5cf6" fill-opacity="0.15" />
+    <text x="50" y="56" font-family="sans-serif" font-size="18" fill="#a78bfa" text-anchor="middle">🎨</text>
+    <text x="30" y="115" font-family="sans-serif" font-size="20" font-weight="800" fill="#ffffff">Carousel Studio</text>
+    <text x="30" y="145" font-family="sans-serif" font-size="13" font-weight="400" fill="#94a3b8">1080×1350 Canvas Engine</text>
+    <text x="30" y="165" font-family="sans-serif" font-size="13" font-weight="400" fill="#94a3b8">10 glowing themes, zero-server</text>
+    <text x="30" y="185" font-family="sans-serif" font-size="13" font-weight="700" fill="#a78bfa">batch PNG &amp; PDF export</text>
+  </g>
+
+  <!-- Bottom Trust Bar -->
+  <g transform="translate(0, 620)">
+    <line x1="200" y1="0" x2="1080" y2="0" stroke="#1e293b" stroke-width="1" />
+    <text x="640" y="45" font-family="sans-serif" font-size="14" font-weight="600" fill="#64748b" text-anchor="middle">
+      ✓ ZERO WATERMARKS • ✓ UNLIMITED GENERATION • ✓ COMMERCIAL CLIENT RIGHTS • ✓ $0 RECURRING FEES
+    </text>
+  </g>
+</svg>

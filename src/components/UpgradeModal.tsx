@@ -45,8 +45,8 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({ isOpen, onClose, onS
     }
   };
 
-  // Set to your Gumroad product checkout link
-  const CHECKOUT_URL = 'https://caanand7.gumroad.com/l/hookforge';
+  // Set to your Gumroad product checkout link with EARLYBIRD coupon pre-applied
+  const CHECKOUT_URL = 'https://caanand7.gumroad.com/l/hookforge/EARLYBIRD';
 
   return (
     <div 
@@ -73,7 +73,7 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({ isOpen, onClose, onS
         <div className="text-center space-y-2 mb-6">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-amber-500/10 to-amber-500/20 border border-amber-500/30 text-amber-300 text-[11px] font-mono font-medium tracking-wide">
             <Crown className="w-3.5 h-3.5 text-amber-400" />
-            Founder Early-Bird Offer
+            Founder Early-Bird Deal • First 10 Creators
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-sans">
             Unlock HookForge <span className="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">PRO</span>
@@ -114,10 +114,10 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({ isOpen, onClose, onS
         {/* Pricing & CTA */}
         <div className="text-center space-y-4 mb-6">
           <div className="flex items-baseline justify-center gap-2.5">
-            <span className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">$39</span>
-            <span className="text-sm text-slate-500 line-through font-mono">$149</span>
-            <span className="text-[11px] font-mono font-semibold px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
-              ONE-TIME LIFETIME PASS
+            <span className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">$19</span>
+            <span className="text-sm text-slate-500 line-through font-mono">$39</span>
+            <span className="text-[11px] font-mono font-semibold px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-300 border border-amber-500/30">
+              50% OFF (CODE: EARLYBIRD)
             </span>
           </div>
 
@@ -128,12 +128,12 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({ isOpen, onClose, onS
             className="w-full py-3.5 px-6 rounded-xl font-bold text-sm flex items-center justify-center gap-2 text-white bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 shadow-[0_0_25px_-5px_rgba(16,185,129,0.4),inset_0_1px_0_rgba(255,255,255,0.25)] hover:shadow-[0_0_35px_-2px_rgba(16,185,129,0.6)] hover:scale-[1.01] active:scale-[0.99] transition-all"
           >
             <Zap className="w-4 h-4 fill-white" />
-            <span>Claim Lifetime Access ($39)</span>
+            <span>Claim 50% Launch Deal ($19 LTD)</span>
           </a>
 
           <div className="flex items-center justify-center gap-2 text-[11px] text-slate-400">
             <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-            <span>14-Day Money-Back Guarantee • Instant License Delivery</span>
+            <span>Use code <strong className="text-amber-300 font-mono">EARLYBIRD</strong> at checkout • 14-Day Money-Back Guarantee</span>
           </div>
         </div>
 

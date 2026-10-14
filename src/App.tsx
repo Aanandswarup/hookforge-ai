@@ -103,6 +103,30 @@ export function App() {
         />
       </div>
 
+      {/* Launch Celebration Announcement Bar */}
+      {!credits.isPro && (
+        <aside aria-label="Announcement" className="relative z-40 bg-gradient-to-r from-emerald-950/60 via-amber-950/40 to-teal-950/60 border-b border-emerald-500/20 py-2 px-4 backdrop-blur-md">
+          <div className="max-w-7xl mx-auto flex items-center justify-center gap-2.5 flex-wrap text-xs text-slate-300">
+            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-mono font-bold text-[10px] border border-amber-500/30 uppercase tracking-wider">
+              🔥 Launch Special
+            </span>
+            <span>
+              First 10 Creators get <strong className="text-white font-semibold">50% OFF</strong> ($19 Lifetime Access) with code{' '}
+              <code className="bg-surface-card px-1.5 py-0.5 rounded text-amber-300 font-mono font-bold border border-surface-border">
+                EARLYBIRD
+              </code>
+            </span>
+            <button
+              onClick={() => setIsUpgradeOpen(true)}
+              className="text-emerald-400 hover:text-emerald-300 font-semibold inline-flex items-center gap-1 transition-colors group cursor-pointer"
+            >
+              <span>Claim \$19 Pass</span>
+              <span className="group-hover:translate-x-0.5 transition-transform">→</span>
+            </button>
+          </div>
+        </aside>
+      )}
+
       {/* Navigation */}
       <Navbar
         credits={credits}
