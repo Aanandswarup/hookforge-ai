@@ -123,6 +123,15 @@ export function App() {
               <span>Claim \$19 Pass</span>
               <span className="group-hover:translate-x-0.5 transition-transform">→</span>
             </button>
+            <span className="text-slate-600 hidden sm:inline">|</span>
+            <a
+              href="./VIRAL_HOOK_VAULT_2026.pdf"
+              download="VIRAL_HOOK_VAULT_2026.pdf"
+              className="text-slate-400 hover:text-amber-300 transition-colors inline-flex items-center gap-1 text-[11px] underline underline-offset-4"
+              title="Download 100+ Viral Hooks & Scripts PDF"
+            >
+              <span>📥 Free 100+ Hook Vault PDF</span>
+            </a>
           </div>
         </aside>
       )}

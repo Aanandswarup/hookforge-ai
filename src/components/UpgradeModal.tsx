@@ -109,6 +109,23 @@ export const UpgradeModal: React.FC<UpgradeModalProps> = ({ isOpen, onClose, onS
             </div>
             <span><strong className="text-white font-semibold">Full Commercial License:</strong> Unlimited use for client deliverables & agency work</span>
           </div>
+          <div className="flex items-start gap-2.5">
+            <div className="w-4 h-4 rounded-full bg-amber-500/15 border border-amber-500/30 flex items-center justify-center shrink-0 mt-0.5">
+              <Check className="w-3 h-3 text-amber-400" />
+            </div>
+            <span><strong className="text-amber-300 font-semibold">🎁 Free Bonus Ebook:</strong> 2026 Viral Hook Vault (100+ Hooks, Scripts & Frameworks PDF — $99 Value)</span>
+          </div>
+        </div>
+
+        {/* Free Sample Download Link */}
+        <div className="mb-5 text-center">
+          <a
+            href="./VIRAL_HOOK_VAULT_2026.pdf"
+            download="VIRAL_HOOK_VAULT_2026.pdf"
+            className="text-[11px] text-slate-400 hover:text-emerald-400 transition-colors inline-flex items-center gap-1 underline underline-offset-4"
+          >
+            <span>📥 Want a sneak peek? Download Free 15-Hook Sample PDF</span>
+          </a>
         </div>
 
         {/* Pricing & CTA */}

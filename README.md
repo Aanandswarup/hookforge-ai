@@ -2,6 +2,10 @@
 
 > **Turn any raw idea or topic into 5 psychological video hooks, a 60s retention director's script with B-roll cues, and an in-browser 1080×1350 visual carousel deck in 10 seconds.**
 
+[![Live Web App](https://img.shields.io/badge/Live_App-aanandswarup.github.io%2Fhookforge--ai-emerald?style=for-the-badge&logo=googlechrome)](https://aanandswarup.github.io/hookforge-ai/)
+[![Download Free Vault](https://img.shields.io/badge/Free_Ebook-100+_Viral_Hooks_PDF-amber?style=for-the-badge&logo=adobeacrobatreader)](https://aanandswarup.github.io/hookforge-ai/VIRAL_HOOK_VAULT_2026.pdf)
+[![Gumroad Store](https://img.shields.io/badge/Gumroad-Lifetime_Pass_$19-ff90e8?style=for-the-badge&logo=gumroad)](https://caanand7.gumroad.com/l/hookforge/EARLYBIRD)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](LICENSE)
 [![Tests: 91/91 Passing](https://img.shields.io/badge/Tests-91%2F91%20Passed%20(100%25)-10b981.svg)](tests/)
 [![Architecture: Zero-Server-Cost](https://img.shields.io/badge/Server%20Cost-%240%2Fmonth-cyan.svg)](#-zero-server-cost-architecture)
